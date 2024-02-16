@@ -1,21 +1,14 @@
-import { useSelector } from "react-redux";
-import css from "./App.module.css";
-import LangSwitcher from "./LangSwitcher/LangSwitcher";
-import BalanceViewer from "./BalanceViewer/BalanceViewer";
+import { Layout } from "./Layout/Layout";
+import { AppBar } from "./AppBar/AppBar";
+import { TaskForm } from "./TaskForm/TaskForm";
+import { TaskList } from "./TaskList/TaskList";
 
-function App() {
-  const lang = useSelector((state) => state.locale.lang);
-  const balance = useSelector((state) => state.balance.value);
-
+export const App = () => {
   return (
-    <div className={css.app}>
-      <LangSwitcher />
-      <p>Current language: {lang}</p>
-      <hr />
-      <BalanceViewer />
-      <p>Balance: {balance} credits</p>
-    </div>
+    <Layout>
+      <AppBar />
+      <TaskForm />
+      <TaskList />
+    </Layout>
   );
-}
-
-export default App;
+};

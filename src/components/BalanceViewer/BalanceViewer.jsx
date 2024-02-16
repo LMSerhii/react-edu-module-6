@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
-import { deposit } from "../../redux/balanceSlice";
-import { withdraw } from "../../redux/balanceSlice";
+import { deposit } from "../../redux/balance/actions";
+import { withdraw } from "../../redux/balance/actions";
 
 export default function BalanceViewer() {
   const dispatch = useDispatch();
