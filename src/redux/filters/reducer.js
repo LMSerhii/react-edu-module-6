@@ -1,4 +1,8 @@
-import { initialFiltersState } from "./constans";
+import { statusFilters } from "./constans";
+
+export const initialFiltersState = {
+  status: statusFilters.all,
+};
 
 export const filtersReducer = (state = initialFiltersState, action) => {
   switch (action.type) {

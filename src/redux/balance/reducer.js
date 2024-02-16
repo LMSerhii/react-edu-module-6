@@ -1,4 +1,4 @@
-import { initialBalanceState } from "./constans";
+export const initialBalanceState = { value: 100 };
 
 export const balanceReducer = (state = initialBalanceState, action) => {
   switch (action.type) {

@@ -1,4 +1,4 @@
-import { initialLocaleState } from "./constans";
+export const initialLocaleState = { lang: "uk" };
 
 export const localeReducer = (state = initialLocaleState, action) => {
   switch (action.type) {
